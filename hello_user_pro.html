@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello user Pro</title>
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"> -->
+</head>
+<body>
+  <main>
+    <h1 id="greeting-container"></h1>
+    <dialog id="dialog" open>
+      <form id="form" method="dialog">
+        <label for="name">What is your name?</label>
+        <input id="name" type="text" placeholder="John" required />
+        <button>Submit</button>
+      </form>
+    </dialog>
+  </main>
+
+  <script>
+    const greetingContainer = document.querySelector('#greeting-container');
+    const dialog = document.querySelector('#dialog');
+    const form = document.querySelector('#form');
+    let inputValue = document.querySelector('#name').value;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      inputValue = document.querySelector('input').value;
+      greetingContainer.innerHTML = `Hello, ${inputValue} How are you?`;
+
+      dialog.close();
+    });
+  </script>
+</body>
+</html>
