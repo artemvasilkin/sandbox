@@ -18,9 +18,9 @@
 // Якщо в якомусь випадку він не захоче вводити інформацію і натисне Скасувати, показати йому повідомлення – “Шкода, що Ви не захотіли ввести свій(ю) …” і вказуємо, що він не захотів вводити – дату народження, місто чи вид спорту .
 
 const userPortrait = {
-    birthYear: prompt("What year were you born?"),
-    city: prompt("In which city do you live?"),
-    favoriteSport: prompt("What is your favorite sport?"),
+  birthYear: prompt("What year were you born?"),
+  city: prompt("In which city do you live?"),
+  favoriteSport: prompt("What is your favorite sport?"),
 };
 
 const getAgeMessage = (year) =>
@@ -61,7 +61,7 @@ const getSportMessage = (sportType) => {
 };
 
 alert(
-`${getAgeMessage(userPortrait.birthYear)}
+  `${getAgeMessage(userPortrait.birthYear)}
 ${getCityMessage(userPortrait.city)}
 ${getSportMessage(userPortrait.favoriteSport)}`
 );
