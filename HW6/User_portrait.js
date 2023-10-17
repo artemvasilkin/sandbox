@@ -17,9 +17,11 @@
 
 // Якщо в якомусь випадку він не захоче вводити інформацію і натисне Скасувати, показати йому повідомлення – “Шкода, що Ви не захотіли ввести свій(ю) …” і вказуємо, що він не захотів вводити – дату народження, місто чи вид спорту .
 
-const userBirthYear = prompt("What year were you born?");
-const userCity = prompt("In which city do you live?");
-const userFavoriteSport = prompt("What is your favorite sport?");
+const userPortrait = {
+    birthYear: prompt("What year were you born?"),
+    city: prompt("In which city do you live?"),
+    favoriteSport: prompt("What is your favorite sport?"),
+};
 
 const getAgeMessage = (year) =>
   year
@@ -37,8 +39,8 @@ const getCityMessage = (city) => {
     return `It's a shame you didn't share you city :(`;
   }
 
-  return capitalsMapper[userCity]
-    ? `You live in the capital of ${capitalsMapper[userCity]}`
+  return capitalsMapper[city]
+    ? `You live in the capital of ${capitalsMapper[city]}`
     : `You live in ${city}`;
 };
 
@@ -59,7 +61,7 @@ const getSportMessage = (sportType) => {
 };
 
 alert(
-`${getAgeMessage(userBirthYear)}
-${getCityMessage(userCity)}
-${getSportMessage(userFavoriteSport)}`
+`${getAgeMessage(userPortrait.birthYear)}
+${getCityMessage(userPortrait.city)}
+${getSportMessage(userPortrait.favoriteSport)}`
 );
