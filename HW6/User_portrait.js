@@ -26,7 +26,7 @@ const userPortrait = {
 const getAgeMessage = (year) =>
   year
     ? `You are ${new Date().getFullYear() - year} years old.`
-    : `It's a shame you didn't share you favorite sport :(`;
+    : `It's a shame you didn't share you age :(`;
 
 const getCityMessage = (city) => {
   const capitalsMapper = {
