@@ -19,9 +19,8 @@ const removeElementFomArray = (element, array) => {
 
   if (elementIndex >= 0) {
     array.splice(elementIndex, 1);
-    alert(`Success: ${array}`);
 
-    return;
+    return alert(`Success: ${array}`);
   }
 
   return alert(`Sorry, could not find element "${element}" in array :(`)
