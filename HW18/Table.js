@@ -1,6 +1,6 @@
 // Вивести таблицю 10 × 10, заповнену числами від 1 до 100 (таблиця створюється динамічно)
 
-const appElement = document.getElementById('app');
+const rootElement = document.getElementsByTagName('body')[0];
 
 const table = document.createElement('table');
 
@@ -13,4 +13,4 @@ for (let i = 0; i < 10; i++) {
   }
 }
 
-appElement.appendChild(table);
+rootElement.appendChild(table);
